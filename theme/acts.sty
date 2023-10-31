@@ -1,0 +1,40 @@
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{biblatex}
+\usepackage{hyperref}
+\addbibresource{references.bib}
+
+\usepackage{fontspec}
+\setmainfont{Tex Gyre Termes}
+\setsansfont{Tex Gyre Heros}
+
+
+\let\defaultmaketitle\maketitle
+
+\makeatletter
+\renewcommand{\maketitle}{%
+	% \defaultmaketitle
+
+	\begin{center}
+		\includegraphics[width=0.2\textwidth]{theme/logo_acts.pdf}\\
+		\vspace{1em}
+		{\huge \sffamily \bfseries \centering \@title}
+
+		% \begin{tabular}[t]{cc}
+			% \includegraphics[width=0.25\textwidth]{theme/logo_acts.pdf} &
+			% \huge \sffamily \bfseries \@title
+		% \end{tabular}
+
+		\vspace*{1em}
+			\begin{tabular}[t]{c}
+				\@author
+			\end{tabular}\par
+		\vspace*{1em}
+
+	\end{center}
+}
+\makeatother
+

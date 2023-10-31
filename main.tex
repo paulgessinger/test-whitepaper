@@ -1,0 +1,88 @@
+\documentclass[12pt,a4paper]{scrarticle}
+
+\usepackage{theme/acts}
+
+\usepackage{lipsum}
+
+\input{metadata.tex}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    \lipsum[2-4] 
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+
+We closely follow the description in \cite{adams1995}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{example-image-a}
+    \caption{This is a caption for a figure!}
+    \label{fig:example_a}
+\end{figure}
+
+\lipsum[1] 
+
+As discussed in \autoref{fig:example_a}, the results are very promising.
+
+\section{Method}
+
+\begin{figure}[ht]
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{example-image-a}
+        \caption{This is a caption for a figure!}
+        \label{fig:sub:example_a}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{example-image-b}
+        \caption{This is a caption for a figure!}
+        \label{fig:sub:example_b}
+    \end{subfigure}
+
+    \caption{This is a combined caption, \subref{fig:sub:example_a} shows one
+    thing, \subref{fig:sub:example_b} shows another thing}
+    \label{fig:sub}
+\end{figure}
+
+\lipsum[1] 
+
+See \autoref{fig:sub} for an example of a combined figure.
+
+\lipsum[1] 
+
+\begin{equation}
+    a^2 + b^2 = c^2
+    \label{eq:pythagoras}
+\end{equation}
+
+The business with the triangles, our boy Pythagoras has already figured out, according to \autoref{eq:pythagoras}.
+
+\section{Conclusion}
+
+\lipsum[1] 
+
+\appendix
+
+\section{Auxiliary material}
+\subsection{First subsection}
+
+\lipsum[1] 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{example-image-a}
+    \caption{This is a caption for a figure!}
+    \label{fig:appendix_example_a}
+\end{figure}
+
+\printbibliography{}
+
+\end{document}
