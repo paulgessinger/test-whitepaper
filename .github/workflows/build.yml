@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    tags:
+      - '*'
   pull_request:
 
 jobs:
@@ -38,3 +40,10 @@ jobs:
         with:
           name: build
           path: build/*.pdf
+
+
+      - name: Make release
+        if: startsWith(github.event.ref, 'refs/tags/')
+      - uses: ncipollo/release-action@v1
+          with:
+          artifacts: "build/*.pdf"
