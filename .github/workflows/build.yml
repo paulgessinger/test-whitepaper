@@ -45,5 +45,5 @@ jobs:
       - name: Make release
         if: startsWith(github.event.ref, 'refs/tags/')
       - uses: ncipollo/release-action@v1
-          with:
+        with:
           artifacts: "build/*.pdf"
